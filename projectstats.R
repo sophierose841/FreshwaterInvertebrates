@@ -37,7 +37,7 @@ print(ASPTreg)
 
 # determining the statistics to be displayed on the BBWI vs distance plot 
 BBWI_stats <- lm(WQ ~ distance_source_km,
-                 data = wq_data)
+                 data = water_q)
 summary(BBWI_stats)
 # p-value = 0.09241
 # R-squared = 0.189
