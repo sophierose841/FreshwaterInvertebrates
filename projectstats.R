@@ -51,23 +51,6 @@ summary(BBWI_stats)
 
 print(BBWIreg)
 
-# Emma: creating the plot of our water quality index (BBWI) vs. distance from source
-(wq_plot2 <- ggplot(wq_data, aes(x = distance_source_km, y = WQ)) +
-    labs(
-      x = "Distance from Source (km)",
-      y = "Water Quality Index"
-    ) +
-    stat_smooth(method = "lm", color = "black", alpha = 0.7) +
-    geom_point(size = 7.5) +
-    geom_text(x = 5.6, y = 7, label = expression(paste("R"^2, " = 0.189; p = 0.092")),
-              parse = TRUE, fontface = "italic", size = 14) +
-    theme_pubr() +
-    theme(axis.text = element_text(size = 36),
-          axis.title = element_text(size = 40),
-          axis.title.x = element_text(margin = margin(t = 20)),
-          axis.title.y = element_text(margin = margin(r = 20))))
-
-ggsave(file = "BBWIdist_plot.png", width = 14, height = 14, units = c("in"), path = "Figures")
 
 
 
